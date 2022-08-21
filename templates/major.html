@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Milk Quality Prediction Major Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/owl.theme.default.min.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/jquery-ui.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/aos.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/owl.carousel.min.css')  }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename =' fonts/icomoon/style.css')}}">
+    <link href="{{ url_for('static',filename = 'css/jquery.fancybox.min.css')  }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/jquery.mb.YTPlayer.min.css')  }}" rel="stylesheet" media="all" type="text/css">
+    <link href="{{ url_for('static',filename = 'css/bootstrap-datepicker.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'fonts/flaticon/font/flaticon.css')  }}" rel="stylesheet">
+
+<style>
+  .form1{
+    /* background: #000000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    flex-direction: column;
+    /* width: 500px; */
+    border-left-width: 250px;
+    border: 2px solid black;
+    /* padding: 30px; */
+    background: white;;
+    border-radius: 25px;
+    /* margin-right: 100px; */
+  }
+  .a{
+    color:black;
+    background-color: skyblue;
+  }
+</style>
+</head>
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+          <header style="background-color: lightblue;" class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+              <div class="d-flex align-items-center">
+                <div class="site-logo">
+                  <a href="/" class="d-block">
+                    <img style="border-radius: 25px;" src="{{ url_for('static',filename = 'image/PIET logo with tagline.jpg')}}" alt="Image" class="img-fluid">
+                  </a>
+                </div>
+                <div class="mr-auto">
+                  <nav class="site-navigation position-relative text-right" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                      <li class="active">
+                        <a href="/" style="color: blue; margin-right: 15px;"><button type="button"  class="btn btn-outline-primary" style="border-radius: 25px;">HOME</button></a>
+                      </li>
+                      <br>
+                      <li>
+                        <a href="/aboutus" style="color: blue; margin-right: 10px;"><button type="button"  class="btn btn-outline-primary" style="border-radius: 25px;">ABOUT US</button></a>
+                      </li>
+                      <br>
+                       <li>
+                        <a href="/minor" style="color: blue; margin-right: 10px; text-align: center; "><button type="button"  class="btn btn-outline-primary" style="border-radius: 25px;">MINOR PROJECT</button></a>
+                       </li>
+                       <br>
+                       <li>
+                        <a href="/gallery" style="color: blue; margin-right: 10px; text-align: left; "><button type="button"  class="btn btn-outline-primary" style="border-radius: 25px;">GALLERY</button></a>
+                      </li>
+                      <!-- <br>
+                      <li>
+                        <a href="https://github.com/UmarTanwar3527" target="_blank" style="color: blue; margin-right: 10px; text-align: left; "><button type="button"  class="btn btn-outline-primary" >GIT HUB</button></a>
+                      </li>
+                      <br>
+                      <li>
+                        <a href="https://www.linkedin.com/in/umartanwar2753/" target="_blank" style="color: blue; margin-right: 10px; text-align: left; "><button type="button"  class="btn btn-outline-primary" >LINKEDIN</button></a>
+                      </li> -->
+                      
+                    </ul>                                                                 
+                  </nav>
+                </div>
+                
+               
+              </div>
+            </div>
+      
+          </header>
+          <hr>
+          <center>
+            <h2 class="mb-0" style="color: black;" >MAJOR PROJECT</h2><br>
+        </center>
+        <!-- <hr> -->
+        <br><br><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div style="border-radius: 25px;" class="col-5 d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+                    
+                    <img src="{{ url_for('static',filename = 'image/milk.jpg')}}" class="img-fluid"
+                    style="width: auto; height: 200px; min-width: 400px;min-height: 300px;border-radius: 25px;">
+                    
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 " style=" padding: 20px;">
+                    <h1  style="color:#000000"><B> <i>Milk Quality Prediction<B><i></h1>
+                        <br><br>
+                        <p style="font-size:20px;text-align:justify; color: #808000"><i>It is a Internship project developed at Summer internship 2022 at poornima Institute of Engineering & technology, Jaipur.This  Summer Internship 2022 on Artificial intelligence and Data Science was conducted from 27 June 2022 to 14 August 2022</i>  </p>
+                        
+                        
+                        <br><br>
+                        
+                    </div>
+                </div>
+            </div>
+            <br><br>
+          <div class="card-body">
+            <h5 class="card-title"; style="text-align:center">Model Deployment</h5>
+            
+            <!-- Main Input For Receiving Query to our ML -->
+            <div class="form1" style="border-radius: 25px;background-color: lightcyan;">
+                <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
+                    <center>
+                        <div class="col-2" style="color: #000; border-radius: 25px;">
+                            <center>
+                                <label for="floatingInput" class="form-label">pH</label>
+                                <input  width: fit-content; type="number" class="form-control" id="pH" name="pH" step="any" min="3" max="10" required="required"         placeholder="Enter your pH level">
+                            </center>
+                        </div>
+                    </center>
+                    <br>
+                    <br>
+                    
+                    <center>
+                        
+                        <div class="col-2" style="color: #000;">
+                            <center>
+                                <label for="floatingInput" class="form-label">Temprature</label>
+                                <input type="number" class="form-control" id="Temprature" name="Temprature" step="any" min="30" max="90" required="required" placeholder="Enter your Temprature">
+                            </center>
+                        </div>
+                    </center>
+                    
+                    <br>
+                    <br>
+                    <center>
+                        <div class="col-2" style="color: #000;">
+                            <label for="floatingInput" class="form-label">Has a Taste</label>
+            <select id="Taste" name ="Taste" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Has a Odor</label>
+            <select id="Odor" name ="Odor" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Is Fat</label>
+            <select id="Fat" name ="Fat" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Has a Turbidity</label>
+            <select id="Turbidity" name ="Turbidity" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+
+        <br><br>
+        <center>
+
+        <div class="col-2" style="color: #000;">
+            <center>
+            <label for="floatingInput" class="form-label">Colour</label><center>
+            <input type="number" class="form-control" id="Colour" name="Colour" step="any" required="required" min="240" max="260" placeholder="Enter the Colour"></center>
+        </div>
+    </center>
+
+        <br>
+        <br>
+        <center>
+
+        <div class="col-md-4" style="color: #000;">
+            <label for="inputState" class="form-label"> <center> Choose a Model</center></label>
+            <center>
+            <select id="Model" name ="Model" step = "any" class="form-select" required>
+                <option selected>Random Forest Classifier</option>
+                <option>Decision Tree Classifier</option>
+                <option>KNN Classifier</option>
+                <option>SVM Classifier</option>
+                <option>Naive Bayes Classifier</option>
+            </select>
+            </center>
+        </div>
+    </center>
+
+        <br>
+        <br>
+
+        <div class="col-12">
+            <center>
+            <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
+        </center>
+        </div>
+        <br>
+    </form>
+    
+    <p style="color: black;">
+        {{prediction_text}}
+        {{extra_text}}
+        {{accuracy_text}}
+    </p>
+</div>
+
+
+
+</div>
+        
+        
+                </div>
+            </div>
+        </div>
+       
+<br>
+<br><br>
+<center>
+<div class="container">
+    <div class="row">
+        <center>
+        <div class="col-xs-12 col-md-4">
+            <div class="card mb-3"style=" border-radius: 25px ;">
+                <div class="card"style="  border-radius: 25px ; background-color: lightcyan;">
+                <p class="card-text"><center><b>Model Deployment QR Code:</b></center></p>
+                <img style="max-height: 350px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/milkqualityprediction.png')  }}"
+                
+                    class="card-img-top" alt="...">
+                
+                    <div class="card-body">
+                        <h5 class="card-title" >Milk Quality Prediction</h5>
+                        <p class="card-text" style="text-align: left;" ><li style="text-align: left;">This modal is devloped by using these following modals:
+                        <ol><li>Nave Bayse Modal</li><li>Decision Tree Clacification Modal</li><li>KNN Clasification Modal</li><li>Random Forest Modal</li><li>Support Vector Machine Modal</li></ol>
+                        </li></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </center>
+    </div>
+</div>
+</center>
+  <br><br>
+  <div class="col-md-12"></div>
+    <center><h3 class="section-title" style="text-align: center; color:black;">Sponsored By</h3></center>
+  </div>
+      
+      <br>
+      <br>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="card mb-3"style="border-radius: 25px;">
+        
+                <div class="card"style="border-radius: 25px;">
+                    <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/AICTEIdeaLabFooterLogo.png')  }}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align:center">IDEA LAB</h5>
+                        
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12 col-md-4">
+            <div class="card mb-3"style="border-radius: 25px;">
+        
+                <div class="card"style="border-radius: 25px;">
+                    <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/nbanew.png')  }}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align:center">NBA</h5>
+                        
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-10 col-md-3">
+            <div class="card mb-3"style="border-radius: 25px;">
+
+                <div class="card"style="border-radius: 25px;">
+                    <img style="max-height: 200px; border-radius: 25px;"
+                        src="{{ url_for('static',filename = 'image/aicte-logo.png')  }}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center; color:black;">AICTE MODROB DEEP LEARNING LAB</h5>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+<script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
+</body>
+
+</html>
