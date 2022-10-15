@@ -117,17 +117,18 @@
                 </div>
             </div>
             <br><br>
-          <div class="card-body">
+          <div class="card-body"style="background-color: lightblue;">
             <h5 class="card-title"; style="text-align:center">Model Deployment</h5>
-            
             <!-- Main Input For Receiving Query to our ML -->
             <div class="form1" style="border-radius: 25px;background-color: lightcyan;">
                 <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
+
+                    
                     <center>
                         <div class="col-2" style="color: #000; border-radius: 25px;">
                             <center>
                                 <label for="floatingInput" class="form-label">pH</label>
-                                <input  width: fit-content; type="number" class="form-control" id="pH" name="pH" step="any" min="3" max="10" required="required"         placeholder="Enter your pH level">
+                                <input  width: fit-content; type="number" class="form-control" id="pH" name="pH" step="any" min="3" max="10" required="required"placeholder="Enter your pH level">
                             </center>
                         </div>
                     </center>
@@ -135,7 +136,6 @@
                     <br>
                     
                     <center>
-                        
                         <div class="col-2" style="color: #000;">
                             <center>
                                 <label for="floatingInput" class="form-label">Temprature</label>
@@ -147,58 +147,59 @@
                     <br>
                     <br>
                     
-        <center>
-        <div class="col-2" style="color: #000;">
-            <label for="floatingInput" class="form-label">Is Fat</label>
-            <select id="Fat" name ="Fat" step = "any" class="form-select" required>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-        </div>
-    </center>
-        <br>
-        <br>
-        <center>
-
-        <div class="col-2" style="color: #000;">
-            <label for="floatingInput" class="form-label">Has a Turbidity</label>
-            <select id="Turbidity" name ="Turbidity" step = "any" class="form-select" required>
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-            </select>
-        </div>
-    </center>
-
-        <br><br>
-        <center>
-        <div class="col-md-4" style="color: #000;">
-            <label for="inputState" class="form-label"> <center> Choose a Model</center></label>
-            <center>
-            <select id="Model" name ="Model" step = "any" class="form-select" required>
-                <option selected>Random Forest Classifier</option>
-                <option>Decision Tree Classifier</option>
-                <option>KNN Classifier</option>
-                <option>SVM Classifier</option>
-                <option>Naive Bayes Classifier</option>
-            </select>
-            </center>
-        </div>
-    </center>
-
-        <br>
-        <br>
-
-        <div class="col-12">
-            <center>
-            <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
-        </center>
-        </div>
-        <br>
-    </form>
+                    <center>
+                        <div class="col-2" style="color: #000;">
+                            <label for="floatingInput" class="form-label">Is Fat</label>
+                            <select id="Fat" name ="Fat" step = "any" class="form-select" required>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </center>
+                    <br>
+                    <br>
+                    <center>
+                        
+                        <div class="col-2" style="color: #000;">
+                            <label for="floatingInput" class="form-label">Has a Turbidity</label>
+                            <select id="Turbidity" name ="Turbidity" step = "any" class="form-select" required>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </center>
+                    
+                    <br><br>
+                    <center>
+                        <div class="col-md-4" style="color: #000;">
+                            <label for="inputState" class="form-label"> <center> Choose a Model</center></label>
+                            <center>
+                                <select id="Model" name ="Model" step = "any" class="form-select" required>
+                                    <option selected>Random Forest Classifier</option>
+                                    <option>Decision Tree Classifier</option>
+                                    <option>KNN Classifier</option>
+                                    <option>SVM Classifier</option>
+                                    <option>Naive Bayes Classifier</option>
+                                </select>
+                            </center>
+                        </div>
+                    </center>
+                    
+                    <br>
+                    <br>
+                    
+                    <div class="col-12">
+                        <center>
+                            <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
+                        </center>
+                    </div>
+                    <br>
+                </form>
+                
     
     <p style="color: black;">
         {{prediction_text}}
-        {{extra_text}}
+        {{extra_text}} 
         {{accuracy_text}}
     </p>
 </div>
