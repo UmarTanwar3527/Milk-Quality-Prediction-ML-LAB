@@ -44,16 +44,11 @@ def minor():
 @app.route('/predict',methods=['GET'])
 
 def predict():
-    
-     
+   
     pH = float(request.args.get('pH'))
     Temprature = float(request.args.get('Temprature'))
-    # Taste = float(request.args.get('Taste'))
-    # Odor = float(request.args.get('Odor'))
     Fat = float(request.args.get('Fat'))
     Turbidity = float(request.args.get('Turbidity'))
-    # Colour = float(request.args.get('Colour'))
-
  
     Model = (request.args.get('Model'))
 
