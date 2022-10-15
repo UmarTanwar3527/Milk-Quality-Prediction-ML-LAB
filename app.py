@@ -1,11 +1,8 @@
 from flask import Flask, request, jsonify, render_template
-# from flask_ngrok import run_with_ngrok
 import numpy as np
 import pickle
 
-
 app = Flask(__name__)
-# run_with_ngrok(app)
     
 model_RF=pickle.load(open('Major_RF.pkl', 'rb')) 
 model_KNN=pickle.load(open('Major_KNN.pkl', 'rb')) 
@@ -44,32 +41,33 @@ def minor():
 @app.route('/predict',methods=['GET'])
 
 def predict():
-   
-    pH = float(request.args.get('pH'))
-    Temprature = float(request.args.get('Temprature'))
-    Fat = float(request.args.get('Fat'))
-    Turbidity = float(request.args.get('Turbidity'))
+  pH = float(request.args.get('pH'))
+  Temprature = float(request.args.get('Temprature'))
+  Fat = float(request.args.get('Fat'))
+  Turbidity = float(request.args.get('Turbidity'))
+    
+
  
     Model = (request.args.get('Model'))
 
     if Model=="Random Forest Classifier":
-      prediction = model_RF.predict([[pH, Temprature, Fat, Turbidity]])
+      prediction = model_RF.predict([[pH,Temprature,Fat,Turbidity]])
       accr="99.62%"
 
     elif Model=="Decision Tree Classifier":
-      prediction = model_DT.predict([[pH, Temprature, Fat, Turbidity]])
+      prediction = model_DT.predict([[pH,Temprature,Fat,Turbidity]])
       accr="98.87%"
 
     elif Model=="KNN Classifier":
-      prediction = model_KNN.predict([[pH, Temprature, Fat, Turbidity]])
+      prediction = model_KNN.predict([[pH,Temprature,Fat,Turbidity]])
       accr="99.25%"
 
     elif Model=="SVM Classifier":
-      prediction = model_K_SVM.predict([[pH, Temprature, Fat, Turbidity]])
+      prediction = model_K_SVM.predict([[pH,Temprature,Fat,Turbidity]])
       accr="85.28%"
 
     else:
-      prediction = model_NB.predict([[pH, Temprature, Fat, Turbidity]])
+      prediction = model_NB.predict([[pH,Temprature,Fat,Turbidity]])
       accr="92.08%"
 
     
