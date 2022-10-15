@@ -117,23 +117,25 @@
                 </div>
             </div>
             <br><br>
-          <div class="card-body"style="background-color: lightblue;">
+          <div class="card-body">
             <h5 class="card-title"; style="text-align:center">Model Deployment</h5>
+            
             <!-- Main Input For Receiving Query to our ML -->
             <div class="form1" style="border-radius: 25px;background-color: lightcyan;">
                 <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
-                    
                     <center>
                         <div class="col-2" style="color: #000; border-radius: 25px;">
                             <center>
                                 <label for="floatingInput" class="form-label">pH</label>
-                                <input  width: fit-content; type="number" class="form-control" id="pH" name="pH" step="any" min="3" max="10" required="required"placeholder="Enter your pH level">
+                                <input  width: fit-content; type="number" class="form-control" id="pH" name="pH" step="any" min="3" max="10" required="required"         placeholder="Enter your pH level">
                             </center>
                         </div>
                     </center>
                     <br>
                     <br>
+                    
                     <center>
+                        
                         <div class="col-2" style="color: #000;">
                             <center>
                                 <label for="floatingInput" class="form-label">Temprature</label>
@@ -141,70 +143,109 @@
                             </center>
                         </div>
                     </center>
-                    <br>
-                    <br>
-                    <center>
-                        <div class="col-2" style="color: #000;">
-                            <label for="floatingInput" class="form-label">Is Fat</label>
-                            <select id="Fat" name ="Fat" step = "any" class="form-select" required>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
-                    </center>
-                    <br>
-                    <br>
-                    <center>
-                        
-                        <div class="col-2" style="color: #000;">
-                            <label for="floatingInput" class="form-label">Has a Turbidity</label>
-                            <select id="Turbidity" name ="Turbidity" step = "any" class="form-select" required>
-                                <option value="1">Yes</option>
-                                <option value="0">No</option>
-                            </select>
-                        </div>
-                    </center>
-                    <br><br>
-                    <center>
-                        <div class="col-md-4" style="color: #000;">
-                            <label for="inputState" class="form-label"> <center> Choose a Model</center></label>
-                            <center>
-                                <select id="Model" name ="Model" step = "any" class="form-select" required>
-                                    <option selected>Random Forest Classifier</option>
-                                    <option>Decision Tree Classifier</option>
-                                    <option>KNN Classifier</option>
-                                    <option>SVM Classifier</option>
-                                    <option>Naive Bayes Classifier</option>
-                                </select>
-                            </center>
-                        </div>
-                    </center>
                     
                     <br>
                     <br>
-                    <div class="col-12">
-                        <center>
-                            <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
-                        </center>
-                    </div>
-                    <br>
-                </form>
-                
+                    <center>
+                        <div class="col-2" style="color: #000;">
+                            <label for="floatingInput" class="form-label">Has a Taste</label>
+            <select id="Taste" name ="Taste" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Has a Odor</label>
+            <select id="Odor" name ="Odor" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Is Fat</label>
+            <select id="Fat" name ="Fat" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+        <br>
+        <br>
+        <center>
+
+        <div class="col-2" style="color: #000;">
+            <label for="floatingInput" class="form-label">Has a Turbidity</label>
+            <select id="Turbidity" name ="Turbidity" step = "any" class="form-select" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+    </center>
+
+        <br><br>
+        <center>
+
+        <div class="col-2" style="color: #000;">
+            <center>
+            <label for="floatingInput" class="form-label">Colour</label><center>
+            <input type="number" class="form-control" id="Colour" name="Colour" step="any" required="required" min="240" max="260" placeholder="Enter the Colour"></center>
+        </div>
+    </center>
+
+        <br>
+        <br>
+        <center>
+
+        <div class="col-md-4" style="color: #000;">
+            <label for="inputState" class="form-label"> <center> Choose a Model</center></label>
+            <center>
+            <select id="Model" name ="Model" step = "any" class="form-select" required>
+                <option selected>Random Forest Classifier</option>
+                <option>Decision Tree Classifier</option>
+                <option>KNN Classifier</option>
+                <option>SVM Classifier</option>
+                <option>Naive Bayes Classifier</option>
+            </select>
+            </center>
+        </div>
+    </center>
+
+        <br>
+        <br>
+
+        <div class="col-12">
+            <center>
+            <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
+        </center>
+        </div>
+        <br>
+    </form>
     
-                <p style="color: black;">
-                    {{prediction_text}}
-        {{extra_text}} 
+    <p style="color: black;">
+        {{prediction_text}}
+        {{extra_text}}
         {{accuracy_text}}
     </p>
 </div>
 
 
+
 </div>
-          </div>
+        
+        
+                </div>
             </div>
         </div>
+       
 <br>
-
 <br><br>
 <center>
 <div class="container">
@@ -234,45 +275,63 @@
   <br><br>
   <div class="col-md-12"></div>
     <center><h3 class="section-title" style="text-align: center; color:black;">Sponsored By</h3></center>
-  </div>      
-    <br>
-    <br>
+  </div>
+      
+      <br>
+      <br>
+
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-4">
-            <div class="card mb-3"style="border-radius: 25px;">        
+            <div class="card mb-3"style="border-radius: 25px;">
+        
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/AICTEIdeaLabFooterLogo.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align:center">IDEA LAB</h5>                        
-                    </div>                
+                        <h5 class="card-title" style="text-align:center">IDEA LAB</h5>
+                        
+                    </div>
+        
+        
                 </div>
             </div>
-        </div>        
+        </div>
+        
         <div class="col-xs-12 col-md-4">
-            <div class="card mb-3"style="border-radius: 25px;">        
+            <div class="card mb-3"style="border-radius: 25px;">
+        
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/nbanew.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align:center">NBA</h5>                        
-                    </div>        
+                        <h5 class="card-title" style="text-align:center">NBA</h5>
+                        
+                    </div>
+        
+        
                 </div>
             </div>
-        </div>        
+        </div>
+        
         <div class="col-xs-10 col-md-3">
             <div class="card mb-3"style="border-radius: 25px;">
+
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;"
                         src="{{ url_for('static',filename = 'image/aicte-logo.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"; style="text-align:center; color:black;">AICTE MODROB DEEP LEARNING LAB</h5>
+                        
                     </div>
+
                 </div>
+
             </div>
         </div>
 <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
 </body>
+
 </html>
