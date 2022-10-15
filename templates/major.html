@@ -122,7 +122,6 @@
             <!-- Main Input For Receiving Query to our ML -->
             <div class="form1" style="border-radius: 25px;background-color: lightcyan;">
                 <form action="{{ url_for('predict')}} "method="get" class="row g-3 my-4">
-
                     
                     <center>
                         <div class="col-2" style="color: #000; border-radius: 25px;">
@@ -134,7 +133,6 @@
                     </center>
                     <br>
                     <br>
-                    
                     <center>
                         <div class="col-2" style="color: #000;">
                             <center>
@@ -143,10 +141,8 @@
                             </center>
                         </div>
                     </center>
-                    
                     <br>
                     <br>
-                    
                     <center>
                         <div class="col-2" style="color: #000;">
                             <label for="floatingInput" class="form-label">Is Fat</label>
@@ -168,7 +164,6 @@
                             </select>
                         </div>
                     </center>
-                    
                     <br><br>
                     <center>
                         <div class="col-md-4" style="color: #000;">
@@ -187,7 +182,6 @@
                     
                     <br>
                     <br>
-                    
                     <div class="col-12">
                         <center>
                             <button type="submit" value="NB" name="NB" class="btn btn-outline-primary">Submit</button>
@@ -197,23 +191,20 @@
                 </form>
                 
     
-    <p style="color: black;">
-        {{prediction_text}}
+                <p style="color: black;">
+                    {{prediction_text}}
         {{extra_text}} 
         {{accuracy_text}}
     </p>
 </div>
 
 
-
 </div>
-        
-        
-                </div>
+          </div>
             </div>
         </div>
-       
 <br>
+
 <br><br>
 <center>
 <div class="container">
@@ -243,63 +234,45 @@
   <br><br>
   <div class="col-md-12"></div>
     <center><h3 class="section-title" style="text-align: center; color:black;">Sponsored By</h3></center>
-  </div>
-      
-      <br>
-      <br>
-
+  </div>      
+    <br>
+    <br>
   <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-4">
-            <div class="card mb-3"style="border-radius: 25px;">
-        
+            <div class="card mb-3"style="border-radius: 25px;">        
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/AICTEIdeaLabFooterLogo.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align:center">IDEA LAB</h5>
-                        
-                    </div>
-        
-        
+                        <h5 class="card-title" style="text-align:center">IDEA LAB</h5>                        
+                    </div>                
                 </div>
             </div>
-        </div>
-        
+        </div>        
         <div class="col-xs-12 col-md-4">
-            <div class="card mb-3"style="border-radius: 25px;">
-        
+            <div class="card mb-3"style="border-radius: 25px;">        
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;" src="{{ url_for('static',filename = 'image/nbanew.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title" style="text-align:center">NBA</h5>
-                        
-                    </div>
-        
-        
+                        <h5 class="card-title" style="text-align:center">NBA</h5>                        
+                    </div>        
                 </div>
             </div>
-        </div>
-        
+        </div>        
         <div class="col-xs-10 col-md-3">
             <div class="card mb-3"style="border-radius: 25px;">
-
                 <div class="card"style="border-radius: 25px;">
                     <img style="max-height: 200px; border-radius: 25px;"
                         src="{{ url_for('static',filename = 'image/aicte-logo.png')  }}"
                         class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"; style="text-align:center; color:black;">AICTE MODROB DEEP LEARNING LAB</h5>
-                        
                     </div>
-
                 </div>
-
             </div>
         </div>
 <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
-
 </body>
-
 </html>
