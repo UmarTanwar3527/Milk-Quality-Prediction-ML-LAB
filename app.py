@@ -14,8 +14,6 @@ model_K_SVM=pickle.load(open('Major_SVM_linear.pkl', 'rb'))
 model_DT=pickle.load(open('Major_DT.pkl', 'rb')) 
 model_NB=pickle.load(open('Major_NB.pkl', 'rb')) 
 
-
-
 @app.route('/')
 def home():
   
@@ -61,23 +59,23 @@ def predict():
     Model = (request.args.get('Model'))
 
     if Model=="Random Forest Classifier":
-      prediction = model_RF.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
+      prediction = model_RF.predict([[pH, Temprature, Fat, Turbidity]])
       accr="99.62%"
 
     elif Model=="Decision Tree Classifier":
-      prediction = model_DT.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
+      prediction = model_DT.predict([[pH, Temprature, Fat, Turbidity]])
       accr="98.87%"
 
     elif Model=="KNN Classifier":
-      prediction = model_KNN.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
+      prediction = model_KNN.predict([[pH, Temprature, Fat, Turbidity]])
       accr="99.25%"
 
     elif Model=="SVM Classifier":
-      prediction = model_K_SVM.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
+      prediction = model_K_SVM.predict([[pH, Temprature, Fat, Turbidity]])
       accr="85.28%"
 
     else:
-      prediction = model_NB.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
+      prediction = model_NB.predict([[pH, Temprature, Fat, Turbidity]])
       accr="92.08%"
 
     
